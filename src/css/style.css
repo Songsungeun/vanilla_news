@@ -1,0 +1,32 @@
+.news_header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'NA Sans';
+    font-size: 2.25rem;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: 5px;
+}
+
+.news_logo {
+    margin-left: 5%;
+    display: flex;
+}
+
+#logo_title_left {
+    background-color: #1A73E8;
+    color: white;
+    border: 1px solid #1A73E8;
+}
+#logo_title_right {
+    border: 1px solid #1A73E8;
+    background-color: white;
+    color: #1A73E8;
+}
+
+.header_title {
+    display: flex;
+    flex-basis: 90%;
+    text-align: center;
+    flex-direction: column;
+    /* align-items: center; */
+}
