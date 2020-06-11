@@ -1,0 +1,26 @@
+{
+  "name": "vanilla_news",
+  "version": "1.0.0",
+  "description": "use news api with vanillajs",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Songsungeun/vanilla_news.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Songsungeun/vanilla_news/issues"
+  },
+  "homepage": "https://github.com/Songsungeun/vanilla_news#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "jest": "^26.0.1"
+  }
+}
