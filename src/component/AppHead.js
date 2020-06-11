@@ -1,4 +1,4 @@
-export default class head {
+export default class Head {
     constructor($target) {
         this.header = document.createElement('header');
         this.header.className = 'news_header';

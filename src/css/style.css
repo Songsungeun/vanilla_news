@@ -30,3 +30,15 @@
     flex-direction: column;
     /* align-items: center; */
 }
+
+.content_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border: 1px solid black;
+}
+.slide_show {
+    display: flex;
+    height: 20%;
+    border: 1px solid red;
+}
