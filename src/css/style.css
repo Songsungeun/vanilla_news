@@ -35,10 +35,41 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.section_slide_wrap {
+    display: flex;
+    position: relative;
+    flex-basis: 100%;
+    
 }
 .slide_show {
+    width: 100%;
+    margin-top: 5px;
     display: flex;
-    height: 20%;
-    border: 1px solid red;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top:0;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:all .5s ease-in-out;
+    transform: scale(0.9);
+}
+
+.slide_show img {
+    max-width: 500px;
+    max-height: 300px;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 1;
+    transform: none;
+}
+
+.slide_info {
+    margin-left: 5%;
 }
