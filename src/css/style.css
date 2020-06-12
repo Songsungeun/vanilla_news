@@ -73,3 +73,9 @@
 .slide_info {
     margin-left: 5%;
 }
+
+.news_list {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid blue;
+}

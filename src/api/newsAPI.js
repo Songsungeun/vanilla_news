@@ -1,10 +1,10 @@
 const API_KEY = 'e8f171634dd847ecb841c221cab41a33';
-const API_ENDPOINT = `http://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`
+const API_ENDPOINT_HEAD = `http://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`
+const API_ENDPOINT = 'http://newsapi.org/v2/everything?country=kr&apiKey=e8f171634dd847ecb841c221cab41a33'
 
-
-const request = async (url, limit) => {
+const request = async (url) => {
   try {
-    const res = await fetch(`${API_ENDPOINT}&pageSize=${limit}`, {
+    const res = await fetch(url, {
       method: 'GET',
       mode: 'cors'
     });
@@ -20,8 +20,16 @@ const request = async (url, limit) => {
 const api = {
   fetchHeadLine: async (limit = 20) => {
     try {
-      const headLine = await request(API_ENDPOINT, limit);
+      const headLine = await request(`${API_ENDPOINT_HEAD}&pageSize=${limit}`);
       return headLine;
+    } catch (e) {
+      console.log(e);
+    }
+  },
+  fetchNewsList: async () => {
+    try {
+      const newsList = await request(API_ENDPOINT);
+      return newsList;
     } catch (e) {
       console.log(e);
     }

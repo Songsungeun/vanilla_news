@@ -1,4 +1,5 @@
 import SlideShow from './Slide.js';
+import NewsList from './News.js';
 import { api } from '../api/newsAPI.js';
 
 export default class Content {
@@ -9,15 +10,11 @@ export default class Content {
     this.headLineList, this.firstSlide;
 
     $target.appendChild(this.section);
-    this.onSearch();
-
-
-    // this.render();
+    this.onHeadLineSearch();
   }
 
-  async onSearch() {
+  async onHeadLineSearch() {
     this.headLineList = await api.fetchHeadLine(5);
-    console.log(this.headLineList);
     this.render();
   }
 
@@ -48,6 +45,12 @@ export default class Content {
     const firstSlide = document.querySelector('.slide_show');
     firstSlide.classList.add('first');
     firstSlide.classList.add('showing');
+
+    // news List
+    const newsContainer = document.createElement('div');
+    newsContainer.className = 'news_contianer';
+
+
 
     setInterval(this.slideShow, 5000);
   }
